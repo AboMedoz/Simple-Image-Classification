@@ -10,11 +10,12 @@ from tensorflow.keras.utils import to_categorical
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(BASE_DIR, '..')
-DATA_PATH = os.path.join(ROOT, 'data', 'dataset')
+DATA_PATH = os.path.join(ROOT, 'data', 'Dataset')
 
 data = []
 labels = []
 
+# CIFAR-10
 for i in range(1, 6):
     batch = os.path.join(DATA_PATH, f"data_batch_{i}")
     with open(batch, 'rb') as f:
